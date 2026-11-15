@@ -2,7 +2,7 @@ package org.example.hajarsamouh.jsf;
 
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.model.embedding.EmbeddingModel;
-import dev.langchain4j.model.embedding.onnx.bgesmallenv15.BgeSmallEnV15EmbeddingModel;
+//import dev.langchain4j.model.embedding.onnx.bgesmallenv15.BgeSmallEnV15EmbeddingModel;
 import dev.langchain4j.model.google.genai.GoogleGenAiEmbeddingModel;
 import dev.langchain4j.store.embedding.CosineSimilarity;
 
@@ -12,7 +12,7 @@ public class Test4Embeddings {
 
     public static void main(String[] args) {
 
-        EmbeddingModel modeleLocal = new BgeSmallEnV15EmbeddingModel();
+        //EmbeddingModel modeleLocal = new BgeSmallEnV15EmbeddingModel();
 
         EmbeddingModel modeleGoogle = GoogleGenAiEmbeddingModel.builder()
                 .apiKey(System.getenv("GEMINI_API_KEY"))
@@ -31,12 +31,12 @@ public class Test4Embeddings {
         };
 
         for (String[] couple : couples) {
-            double simLocal = similarite(modeleLocal, couple[0], couple[1]);
+            //double simLocal = similarite(modeleLocal, couple[0], couple[1]);
             double simGoogle = similarite(modeleGoogle, couple[0], couple[1]);
 
             System.out.println("Phrase 1 : " + couple[0]);
             System.out.println("Phrase 2 : " + couple[1]);
-            System.out.printf("  Modèle intégré : %.4f%n", simLocal);
+            //System.out.printf("  Modèle intégré : %.4f%n", simLocal);
             System.out.printf("  Modèle Google  : %.4f%n%n", simGoogle);
         }
     }

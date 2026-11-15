@@ -11,7 +11,7 @@ public class Test1 {
                 .temperature(0.7)
                 .build();
 
-        String question1 = "Bonjour, je m'appelle Hajar Samouh.";
+        String question1 = "Comment s'appelle le chat de Pierre ?";
         String reponse1 = model.chat(question1);
         System.out.println("Question 1 : " + question1);
         System.out.println("Réponse 1 : " + reponse1);
