@@ -14,7 +14,7 @@ public class Test2Couts {
                 .temperature(0.7)
                 .build();
 
-        ChatResponse reponse = model.chat(UserMessage.from("Quelle est la capitale de la France ?"));
+        ChatResponse reponse = model.chat(UserMessage.from("Je dois partir dans 2 jours à Paris ; j'y resterai 3 jours. Est-ce que je dois mettre un parapluie dans mes valises ?"));
         System.out.println("Réponse : " + reponse.aiMessage().text());
 
         // Nombres de tokens
